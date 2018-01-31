@@ -1,0 +1,68 @@
+'\" t
+.TH foo2hbpl1 1 "${MODpage}" "foo2hbpl1 ${MODver}"
+#ifndef OLDGROFF
+#include "macros.man"
+#endif
+'\"==========================================================================
+'\"	MANUAL PAGE SOURCE
+'\"==========================================================================
+.SH NAME
+foo2hbpl1 \- Convert Ghostscript output to an HBPLv1 printer stream
+.SH SYNOPSIS
+.B foo2hbpl1
+.RI [ options "] <" pnm-or-pam-file " >" hbpl1-file
+.SH DESCRIPTION
+.B foo2hbpl1
+converts Ghostscript pbmraw, pgmraw, ppmraw, or pamcmyk32 output
+formats to monochrome or color HBPL version 1 streams, to drive the
+Dell 1250c, Dell C1660w, Dell C1760w,
+Epson AcuLaser C1700,
+and Fuji-Xerox CP105b printers.
+
+.SH COMMAND LINE OPTIONS
+.TP
+.BI \-J\0 filename
+Filename string to send to printer.
+.TP
+.BI \-U\0 username
+Username string to send to printer.
+.SH EXAMPLES
+Create a black and white ZJS stream:
+
+.RS
+.nf
+gs -q -dBATCH -dSAFER -dQUIET -dNOPAUSE \ 
+    -sPAPERSIZE=letter -r600x600 -sDEVICE=pgmraw \ 
+    -sOutputFile=- - < testpage.ps \ 
+| foo2hbpl1 >testpage.zm
+.fi
+.RE
+.P
+Create a color ZJS stream:
+
+.RS
+.nf
+gs -q -dBATCH -dSAFER -dQUIET -dNOPAUSE \ 
+    -sPAPERSIZE=letter -g5100x6600 -r600x600 -sDEVICE=pamcmyk32 \ 
+    -sOutputFile=- - < testpage.ps \ 
+| foo2hbpl1 >testpage.zc
+.fi
+.RE
+
+.SH FILES
+.BR /usr/bin/foo2hbpl1
+.SH SEE ALSO
+.BR foo2hbpl1-wrapper (1),
+.BR hbpldecode (1)
+.SH "AUTHOR"
+Rick Richardson <rick.richardson@comcast.net>
+.br
+Peter Korf <peter@niendo.de>
+.br
+Dave Coffin <dcoffin@cybercom.net>
+.br
+${URLHBPL}/
+'\"
+'\"
+'\"
+.em pdf_outline

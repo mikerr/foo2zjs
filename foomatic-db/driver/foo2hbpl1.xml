@@ -1,0 +1,21 @@
+<driver id="driver/foo2hbpl1">
+    <name>foo2hbpl1</name>
+    <url>http://foo2hbpl.rkkda.com/</url>
+    <execution>
+	<filter />
+	<prototype>foo2hbpl1-wrapper %A</prototype>
+    </execution>
+    <comments> <en>
+
+	This is a driver developed for the Dell 1250c, Dell C1660, Dell C1760,
+	Epson AcuLaser C1700, and the Fuji-Xerox DocuPrint cp105.
+
+    </en> </comments>
+    <printers>
+	<printer><id>printer/Dell-1250c</id></printer>
+	<printer><id>printer/Dell-C1660</id></printer>
+	<printer><id>printer/Dell-C1760</id></printer>
+	<printer><id>printer/Epson-AcuLaser_C1700</id></printer>
+	<printer><id>printer/Fuji_Xerox-DocuPrint_CP105</id></printer>
+    </printers>
+</driver>
