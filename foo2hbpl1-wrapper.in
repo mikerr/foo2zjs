@@ -351,7 +351,7 @@ Custom*)
 12|envDL|EnvDL)		DIM=2599x5197  ;;
 isob5|b5)		DIM=4158x5906  ;;
 2|jisb5|B5jis)		DIM=4299x6071  ;;
-a5)			DIM=3496x4961  ;;
+3|a5|A5)		DIM=3496x4961  ;;
 6|folio|Folio)		DIM=5100x7800  ;;
 pa4)			DIM=4961x6600  ;;
 archA)			DIM=5400x7200  ;;
