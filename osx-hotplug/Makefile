@@ -64,8 +64,5 @@ clean:
 	rm -f *.o *.1
 
 uninstall:
-	( \
-		echo "g/osx-hplj-hotplug/d"; \
-		echo "w"; \
-	) | ex $(RC)
+	-(echo "g/osx-hplj-hotplug/d"; echo "w") | ex $(RC)
 	-rm -f $(BIN)/osx-hplj-hotplug

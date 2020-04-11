@@ -341,20 +341,20 @@ Custom*)
 # /usr/share/ghostscript/9.10/Resource/Init/gs_statd.ps
 # foo2hbpl1 will provide the appropriate numeric value
 
-letter)		DIM=5100x6600  ;;
-legal)		DIM=5100x8400  ;;
-a4)		DIM=4961x7016  ;;
-executive)	DIM=4350x6300  ;;
-env10)		DIM=2475x5700  ;;
-monarch)	DIM=2325x4500  ;;
-c5)		DIM=3827x5409  ;;
-envDL)		DIM=2599x5197  ;;
-isob5|b5)	DIM=4158x5906  ;;
-jisb5)		DIM=4299x6071  ;;
-a5)		DIM=3496x4961  ;;
-folio)		DIM=5100x7800  ;;
-pa4)		DIM=4961x6600  ;;
-archA)		DIM=5400x7200  ;;
+4|letter|Letter)	DIM=5100x6600  ;;
+7|legal|Legal)		DIM=5100x8400  ;;
+1|a4|A4)		DIM=4961x7016  ;;
+5|executive|Executive)	DIM=4350x6300  ;;
+9|env10|Env10)		DIM=2475x5700  ;;
+10|monarch|EnvMonarch)	DIM=2325x4500  ;;
+11|c5|EnvC5)		DIM=3827x5409  ;;
+12|envDL|EnvDL)		DIM=2599x5197  ;;
+isob5|b5)		DIM=4158x5906  ;;
+2|jisb5|B5jis)		DIM=4299x6071  ;;
+3|a5|A5)		DIM=3496x4961  ;;
+6|folio|Folio)		DIM=5100x7800  ;;
+pa4)			DIM=4961x6600  ;;
+archA)			DIM=5400x7200  ;;
 *)		error "Unimplemented paper code $PAPER";;
 esac
 
