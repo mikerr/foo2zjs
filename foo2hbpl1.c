@@ -603,7 +603,7 @@ six:	    iwide = getint(fp);
 	else
 	    ibyte = wide >> 3;
 	byte = wide * deep;
-	image = calloc (ihigh+2, byte);
+	image = calloc(2*ihigh+2, byte);
 	for (row = 1; row <= ihigh; row++)
 	{
 	    i = fread (image, ibyte, 1, fp);
