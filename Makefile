@@ -1052,7 +1052,6 @@ CUPSFILESCONF=/etc/cups/cups-files.conf
 MACLOAD=/System/Library/LaunchDaemons/org.cups.cupsd.plist
 
 cups:	FRC
-	# C
 	if [ -r $(CUPSFILESCONF) ]; then \
 	    (	echo "g/^FileDev/d"; \
 		echo "g/ foo2zjs.../d"; \
